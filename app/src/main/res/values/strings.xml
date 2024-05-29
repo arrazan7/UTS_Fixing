@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">UTS_Fixing</string>
+    <string name="hello">Hello,</string>
+    <string name="read_less">Baca lebih sedikit</string>
+    <string name="read_more">Baca selengkapnya</string>
+    <array name="tujuan_bioskop">
+        <item>Empire XXI</item>
+        <item>Ambarrukmo XXI</item>
+        <item>Jogja City XXI</item>
+        <item>Sleman City Hall XXI</item>
+        <item>CGV Pakuwon Mall</item>
+        <item>CGV J-Walk</item>
+        <item>CGV Transmart Maguwo</item>
+        <item>Cinepolis Lippo Plaza Jogja</item>
+    </array>
+    <array name="jenis_seat">
+        <item>Starium</item> <!--35k sd 65k-->
+        <item>Regular</item> <!--30k sd 60k-->
+        <item>RealD 3D</item> <!--30k sd 200k-->
+        <item>4DX</item> <!--80k sd 150k-->
+        <item>Sphere X</item> <!--55k sd 150k-->
+        <item>Screen X</item> <!--60k sd 70k-->
+        <item>Sweet Box</item> <!--110k sd 140k-->
+        <item>Velvet Class</item> <!--70k sd 200k-->
+        <item>Gold Class</item> <!--80k sd 200k-->
+        <item>Satin Suite</item> <!--80k sd 150k-->
+    </array>
+    <integer-array name="jumlah_seat">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </integer-array>
+    <array name="metode_bayar">
+        <item>Bank transfer</item>
+        <item>E-Wallet transfer</item>
+        <item>Kredit</item>
+        <item>Cash</item>
+    </array>
+    <array name="bank">
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>BRI</item>
+        <item>Mandiri</item>
+        <item>BSI</item>
+    </array>
+    <array name="wallet">
+        <item>OVO</item>
+        <item>Gopay</item>
+        <item>Shopee Pay</item>
+        <item>Dana</item>
+        <item>Link Aja</item>
+    </array>
+    <array name="kredit">
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>BRI</item>
+        <item>Mandiri</item>
+        <item>BSI</item>
+    </array>
+    <array name="cash">
+        <item>bayar di tempat</item>
+    </array>
+</resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity7">
+
+    <ScrollView
+        android:id="@+id/scroll_tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:paddingTop="14dp"
+                android:text="Details Movie"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/header"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="492dp"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/grey"
+                android:importantForAccessibility="no">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:importantForAccessibility="no">
+
+                    <ImageView
+                        android:id="@+id/movie_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/poster_72"
+                        android:paddingLeft="-1dp"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_cardview"
+                app:layout_constraintLeft_toLeftOf="@id/movie_cardview"
+                android:layout_marginTop="5dp"
+                android:text="Mission Impossible: Dead\nReckoning Part One"
+                android:textSize="25sp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <ImageView
+                android:id="@+id/movie_star"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@id/movie_title"
+                app:layout_constraintLeft_toLeftOf="@id/movie_title"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"/>
+
+            <TextView
+                android:id="@+id/movie_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/movie_star"
+                app:layout_constraintLeft_toRightOf="@id/movie_star"
+                android:layout_marginTop="1dp"
+                android:text=" 7,9/10"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:id="@+id/movie_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_star"
+                app:layout_constraintLeft_toLeftOf="@id/movie_star"
+                android:text="Director: Christopher McQuarrie\nWriters: Bruce Geller, Christopher\nMcQuarrie, Erik Jendresen\nStars: Tom Cruise, Hayley Atwell,\nVing Rhames"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:id="@+id/movie_genre_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_detail"
+                app:layout_constraintLeft_toLeftOf="@id/movie_detail"
+                android:paddingHorizontal="5dp"
+                android:text="Action"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/movie_genre"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/movie_genre_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/movie_genre_1"
+                app:layout_constraintLeft_toRightOf="@id/movie_genre_1"
+                android:layout_marginLeft="8dp"
+                android:paddingHorizontal="5dp"
+                android:text="Adventure"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/movie_genre"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/movie_genre_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/movie_genre_1"
+                app:layout_constraintLeft_toRightOf="@id/movie_genre_2"
+                android:layout_marginLeft="8dp"
+                android:paddingHorizontal="5dp"
+                android:text="Thriller"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/movie_genre"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/header_storyline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_genre_1"
+                app:layout_constraintLeft_toLeftOf="@id/movie_genre_1"
+                android:layout_marginTop="10dp"
+                android:text="Storyline"
+                android:textSize="25sp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/storyline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintTop_toBottomOf="@id/header_storyline"
+                android:text="Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands. With control of the future and the fate of the world at stake, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan is forced to consider that nothing can matter more than the mission -- not even the lives of those he cares about most.\nTranslate:\nEthan Hunt dan tim IMF harus melacak senjata baru yang menakutkan yang mengancam seluruh umat manusia jika jatuh ke tangan yang salah. Dengan kendali masa depan dan nasib dunia yang dipertaruhkan, perlombaan mematikan di sekitar dunia dimulai. Dihadapkan pada musuh yang misterius dan sangat kuat, Ethan terpaksa mempertimbangkan bahwa tidak ada yang lebih penting daripada misinya -- bahkan nyawa orang-orang yang paling dia sayangi."
+                app:trimExpandedText="@string/read_less"
+                app:trimCollapsedText="@string/read_more"
+                app:trimMode="trimModeLength"
+                app:trimLength="250"
+                android:fontFamily="@font/poppins_regular"
+                app:colorClickableText="@color/blue"/>
+
+            <Button
+                android:id="@+id/get_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/storyline"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Get Ticket"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:backgroundTint="@color/blue"
+                android:paddingTop="10dp"
+                app:cornerRadius="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/get_ticket"
+                app:layout_constraintLeft_toLeftOf="@id/get_ticket"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

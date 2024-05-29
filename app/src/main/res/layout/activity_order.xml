@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity"
+    android:background="@color/blue">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="10dp"
+        android:text="Order Summary"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="363dp"
+        android:layout_height="613dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_ticket">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/movie_poster"
+            android:layout_width="91dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/grey"
+            android:importantForAccessibility="no">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <ImageView
+                    android:id="@+id/movie_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/poster_12" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/movie_poster"
+            android:text="Oppenheimer"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/movie_bioskop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_title"
+            app:layout_constraintLeft_toLeftOf="@id/movie_title"
+            android:text="XXI Ambarrukmo"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_bioskop"
+            app:layout_constraintLeft_toLeftOf="@id/movie_bioskop"
+            android:text="monday"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/movie_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_date"
+            app:layout_constraintLeft_toLeftOf="@id/movie_date"
+            android:text="16:00"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <View
+            android:id="@+id/horizontal_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="31dp"
+            app:layout_constraintTop_toTopOf="@id/guideHorizontal"
+            app:layout_constraintBottom_toBottomOf="@id/guideHorizontal"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/txt_order_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/guideHorizontal"
+            android:text="Order Number"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/order_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_order_number"
+            android:text="59293942223304"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/txt_seat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/order_number"
+            android:text="Seat"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/seat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_seat"
+            android:text="Regular"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/txt_pay_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/seat"
+            android:text="Payment Method"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/pay_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_pay_method"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Bank transfer"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/txt_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/pay_method"
+            android:text="Account Number"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_account_number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="091283083"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/txt_harga_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/account_number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Gold Class Seat"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/harga_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_harga_seat"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Rp200.000"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/txt_number_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="@id/txt_harga_seat"
+            app:layout_constraintLeft_toRightOf="@id/guide"
+            android:text="Number of Seat"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toTopOf="@id/number_seat"
+            app:layout_constraintRight_toLeftOf="@id/number_seat"
+            android:src="@drawable/multiplication"/>
+
+        <TextView
+            android:id="@+id/number_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="@id/harga_seat"
+            app:layout_constraintLeft_toRightOf="@id/guide"
+            android:text="5"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <View
+            android:id="@+id/horizontal_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintTop_toBottomOf="@id/harga_seat"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/txt_actual_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line_2"
+            android:text="Actual Pay"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/actual_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_actual_pay"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Rp200.000"
+            android:textSize="30sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/hello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/hello"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Your Username"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/hello" />
+
+            <TextView
+                android:id="@+id/txt_choose_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Choose Top Movie"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                app:layout_constraintTop_toBottomOf="@id/username" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/txt_choose_movie"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_1"
+                            android:paddingLeft="-1.5dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Oppenheimer"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_1"
+                app:layout_constraintTop_toBottomOf="@id/movie_1" />
+
+            <ImageView
+                android:id="@+id/movie_1_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_1_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_1_title" />
+
+            <ImageView
+                android:id="@+id/movie_1_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_1_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_1_title" />
+
+            <ImageView
+                android:id="@+id/movie_1_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_1_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_1_title" />
+
+            <ImageView
+                android:id="@+id/movie_1_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_1_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_1_title" />
+
+            <ImageView
+                android:id="@+id/movie_1_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_half_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_1_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_1_title" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                app:layout_constraintLeft_toRightOf="@id/guide"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_choose_movie"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_2"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/movie_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                app:layout_constraintLeft_toRightOf="@id/guide"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/txt_choose_movie"-->
+<!--                app:cardCornerRadius="10dp"-->
+<!--                android:backgroundTint="@color/grey"-->
+<!--                android:importantForAccessibility="no">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="3dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    android:importantForAccessibility="no">-->
+
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/btn_movie_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/poster_2"-->
+<!--                        android:paddingLeft="0dp"-->
+<!--                        android:paddingRight="0dp"-->
+<!--                        android:paddingVertical="0dp"-->
+<!--                        android:importantForAccessibility="no"/>-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+            <TextView
+                android:id="@+id/movie_2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Barbie"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_2"
+                app:layout_constraintTop_toBottomOf="@id/movie_2" />
+
+            <ImageView
+                android:id="@+id/movie_2_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_2_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_2_title" />
+
+            <ImageView
+                android:id="@+id/movie_2_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_2_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_2_title" />
+
+            <ImageView
+                android:id="@+id/movie_2_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_2_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_2_title" />
+
+            <ImageView
+                android:id="@+id/movie_2_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_2_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_2_title" />
+
+            <ImageView
+                android:id="@+id/movie_2_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_2_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_2_title" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/movie_1_r1"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_3"
+                            android:paddingLeft="-1dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_3_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Elemental"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_3"
+                app:layout_constraintTop_toBottomOf="@id/movie_3" />
+
+            <ImageView
+                android:id="@+id/movie_3_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_3_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_3_title" />
+
+            <ImageView
+                android:id="@+id/movie_3_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_3_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_3_title" />
+
+            <ImageView
+                android:id="@+id/movie_3_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_3_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_3_title" />
+
+            <ImageView
+                android:id="@+id/movie_3_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_3_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_3_title" />
+
+            <ImageView
+                android:id="@+id/movie_3_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_3_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_3_title" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toRightOf="@id/guide"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_2_r1"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_4"
+                            android:paddingLeft="-1dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_4_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="GOTG Vol. 3"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_4"
+                app:layout_constraintTop_toBottomOf="@id/movie_4" />
+
+            <ImageView
+                android:id="@+id/movie_4_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_4_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_4_title" />
+
+            <ImageView
+                android:id="@+id/movie_4_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_4_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_4_title" />
+
+            <ImageView
+                android:id="@+id/movie_4_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_4_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_4_title" />
+
+            <ImageView
+                android:id="@+id/movie_4_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_4_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_4_title" />
+
+            <ImageView
+                android:id="@+id/movie_4_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_4_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_4_title" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/movie_3_r1"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_5"
+                            android:paddingLeft="-1dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_5_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="The Nun II"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_5"
+                app:layout_constraintTop_toBottomOf="@id/movie_5" />
+
+            <ImageView
+                android:id="@+id/movie_5_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_5_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_5_title" />
+
+            <ImageView
+                android:id="@+id/movie_5_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_5_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_5_title" />
+
+            <ImageView
+                android:id="@+id/movie_5_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_5_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_5_title" />
+
+            <ImageView
+                android:id="@+id/movie_5_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_5_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_5_title" />
+
+            <ImageView
+                android:id="@+id/movie_5_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_5_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_5_title" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toRightOf="@id/guide"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_4_r1"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_6"
+                            android:paddingLeft="-1dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_6_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Expend4bles"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_6"
+                app:layout_constraintTop_toBottomOf="@id/movie_6" />
+
+            <ImageView
+                android:id="@+id/movie_6_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_6_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_6_title" />
+
+            <ImageView
+                android:id="@+id/movie_6_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_6_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_6_title" />
+
+            <ImageView
+                android:id="@+id/movie_6_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_half_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_6_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_6_title" />
+
+            <ImageView
+                android:id="@+id/movie_6_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_6_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_6_title" />
+
+            <ImageView
+                android:id="@+id/movie_6_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_6_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_6_title" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/movie_5_r1"
+                app:cardCornerRadius="10dp"
+                android:importantForAccessibility="no">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/grey">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:importantForAccessibility="no">
+
+                        <ImageButton
+                            android:id="@+id/btn_movie_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/poster_7"
+                            android:paddingLeft="-1dp"
+                            android:paddingRight="0dp"
+                            android:paddingVertical="0dp"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_7_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dead Reckoning"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/movie_7"
+                app:layout_constraintTop_toBottomOf="@id/movie_7" />
+
+            <ImageView
+                android:id="@+id/movie_7_r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="@id/movie_7_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_7_title" />
+
+            <ImageView
+                android:id="@+id/movie_7_r2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_7_r1"
+                app:layout_constraintTop_toBottomOf="@id/movie_7_title" />
+
+            <ImageView
+                android:id="@+id/movie_7_r3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_7_r2"
+                app:layout_constraintTop_toBottomOf="@id/movie_7_title" />
+
+            <ImageView
+                android:id="@+id/movie_7_r4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_7_r3"
+                app:layout_constraintTop_toBottomOf="@id/movie_7_title" />
+
+            <ImageView
+                android:id="@+id/movie_7_r5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:src="@drawable/baseline_star_border_24"
+                app:layout_constraintLeft_toRightOf="@id/movie_7_r4"
+                app:layout_constraintTop_toBottomOf="@id/movie_7_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/movie_7_r1"
+                app:layout_constraintLeft_toLeftOf="@id/movie_7"
+                android:textSize="20sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
